@@ -33,7 +33,7 @@ void loop() {
     sendToESP(data);
   }
 
-  delay(1000); // Wait 10 seconds before next read
+  delay(5000); // Wait 10 seconds before next read
 }
 
 bool readSensorData(SensorData &data) {

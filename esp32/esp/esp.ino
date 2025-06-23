@@ -128,7 +128,7 @@ void checkIrrigationStatus() {
     }
 
     bool isEnabled = doc["data"]["is_enabled"];
-    float threshold = doc["data"]["hu shold"] | 30.0;
+    float threshold = doc["data"]["humidity_threshold"].as<float>() ?: 30.0;
 
     Serial.print("🌿 Remote irrigation enabled: ");
     Serial.println(isEnabled ? "YES" : "NO");
